@@ -48,7 +48,6 @@ class RockPaperScissors{
     
     }
     compInput(user){
-        console.log(user);
         let comp:any = Math.floor(Math.random() * 3);
         if (comp=== 0) 
             comp= "rock";

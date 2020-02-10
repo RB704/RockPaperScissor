@@ -11,42 +11,35 @@ var RockPaperScissors = /** @class */ (function () {
             if (choice2 === "scissors") {
                 this.message = "Rock breaks Scissors. You win!";
                 this.userScore++;
-                this.updateScore();
             }
             else {
                 this.message = "Paper covers Rock. You lose!";
                 this.compScore++;
-                this.updateScore();
             }
         }
         else if (choice1 === "paper") {
             if (choice2 === "rock") {
                 this.message = "Paper covers Rock. You win!";
                 this.userScore++;
-                this.updateScore();
             }
             else if (choice2 === "scissors") {
                 this.message = "Scissors cut Paper. You lose!";
                 this.compScore++;
-                this.updateScore();
             }
         }
         else if (choice1 === "scissors") {
             if (choice2 === "rock") {
                 this.message = "Rock breaks Scissors. You lose!";
                 this.compScore++;
-                this.updateScore();
             }
             else if (choice2 === "paper") {
                 this.message = "Scissors cut Paper. You win!";
                 this.userScore++;
-                this.updateScore();
             }
         }
-        //updateScore();
+        this.updateScore();
     };
     RockPaperScissors.prototype.compInput = function (user) {
-        console.log(user);
         var comp = Math.floor(Math.random() * 3);
         if (comp === 0)
             comp = "rock";
